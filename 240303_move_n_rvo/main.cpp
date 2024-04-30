@@ -73,7 +73,7 @@ int main() {
         // TalkingClass() : id_ = 1
         // ~TalkingClass()
     }
-    
+
     {
         TalkingClass::Reset();
         cerr << R"(
@@ -211,7 +211,7 @@ int main() {
         TalkingClass parameter_copy = ReturnParameterReference(x);
         cerr << "x.GetId() = " << x.GetId() << endl;;
         cerr << "parameter_reference.GetId() = " << parameter_reference.GetId() << endl;
-        cerr << "parameter_copy.GetId() = " << parameter_copy.GetId() << endl;)" << endl;       
+        cerr << "parameter_copy.GetId() = " << parameter_copy.GetId() << endl;)" << endl;
         auto ReturnParameterReference = [](TalkingClass& parameter) -> TalkingClass& {
             return parameter;
         };
